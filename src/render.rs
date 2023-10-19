@@ -93,4 +93,40 @@ impl Game {
             WHITE,
         );
     }
+
+    pub fn score_counter(&self) {
+        let mut score_text = "Score: ".to_string();
+        score_text = format!("{}{}", score_text, &self.score);
+        draw_text(
+            &score_text,
+            300.0,
+            30.0,
+            18.0,
+            WHITE,
+        );
+    }
+
+    pub fn high_score(&self) {
+        let mut score_text = "High score: ".to_string();
+        score_text = format!("{}{}", score_text, &self.high_score);
+        draw_text(
+            &score_text,
+            450.0,
+            30.0,
+            18.0,
+            WHITE,
+        );
+    }
+
+    pub fn n_games(&self) {
+        let mut score_text = "N of Games: ".to_string();
+        score_text = format!("{}{}", score_text, &self.n_games);
+        draw_text(
+            &score_text,
+            580.0,
+            30.0,
+            18.0,
+            WHITE,
+        );
+    }
 }
