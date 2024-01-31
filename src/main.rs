@@ -81,7 +81,7 @@ async fn main() {
                 let current_time = get_time();
                 if let Some(start_time) = game_over_time {
                     if current_time - start_time > 0.2 {
-                        // 2 seconds delay
+                        // .2 seconds delay
                         game.restart();
                         game.game_status = GameStatus::Running;
                         game_over_time = None;

@@ -145,14 +145,9 @@ impl Agent {
         next_state: &[i32; 12],
         done: bool,
     ) {
-        //println!("current_q_values_forward\n\n");
+
         let current_q_values = self.neural_network.forward(&state);
-        // println!("current state {:?}", state);
-        // println!("current q {:?}", current_q_values);
-        //println!("next_q_values_forward\n\n");
         let next_q_values = self.neural_network.forward(&next_state);
-        // println!("next state{:?}", next_state);
-        // println!("next q {:?}", next_q_values);
         let mut target_q_values = current_q_values.clone();
         let next_max_q_value = *next_q_values
             .iter()

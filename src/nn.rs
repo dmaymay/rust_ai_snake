@@ -6,7 +6,7 @@ pub struct Matrix {
     rows: usize,
     cols: usize,
 }
-
+// This was such a waste of time
 impl Matrix {
     // Create a new matrix
     pub fn new(rows: usize, cols: usize) -> Self {
@@ -231,7 +231,7 @@ pub struct NeuralNetwork {
 
 impl NeuralNetwork {
     pub fn new(input_size: usize, hidden_size: usize, output_size: usize) -> Self {
-        // Here, we'll initialize one hidden layer and one output layer.
+        // Initialize one hidden layer and one output layer.
         let input_layer = Layer::new(input_size, hidden_size, true);
         let hidden_layer = Layer::new(hidden_size, output_size, false);
         Self {

@@ -102,7 +102,7 @@ impl Game {
                 }
             }
         } else {
-            // Assuming you want to return the current action when direction_lock is true.
+            // return the current action when direction_lock is true.
             match self.direction {
                 Direction::Up => Action::Up,
                 Direction::Down => Action::Down,
